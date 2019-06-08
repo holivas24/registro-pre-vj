@@ -1,0 +1,15 @@
+#{extends 'empty.html' /}
+#{set title:'Usuario creado' /}
+
+<center>
+<div class="jumbotron">
+  <h3>El usuario ${user.nombre} ha sido creado correctamente</h3>      
+</div>
+
+<div class="container">
+
+  <a class="btn btn-lg btn-success" href="/Application/crearUsuario">Crear otro usuario</a>
+  <a class="btn btn-lg btn-danger" href="/Application/index">Volver al inicio</a> 
+  
+</div>
+</center>
