@@ -1,0 +1,32 @@
+#{extends 'empty.html' /}
+#{set title:'Registros' /}
+
+<div class="table-responsive"> 
+<table id="tableUsuarios" class="display" cellspacing="0" width="100%">
+        <thead>
+            <tr>
+                <th>Pregunta</th>
+            </tr>
+        </thead>
+
+        <tbody>
+        	#{list usuarios, as:'e'}
+				<tr>
+					<td>${e.pregunta}</td>
+				</tr>
+			#{/list}
+        </tbody>
+
+        <tfoot>
+            <tr>
+                 <th>Pregunta</th>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+<script>
+	$(document).ready(function()
+	{
+		 $('#tableUsuarios').DataTable();		
+	});
+</script>
