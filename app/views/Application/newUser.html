@@ -1,32 +1,15 @@
 #{extends 'empty.html' /}
-#{set title:'Registros' /}
+#{set title:'Usuario creado' /}
 
-<div class="table-responsive"> 
-<table id="tableUsuarios" class="display" cellspacing="0" width="100%">
-        <thead>
-            <tr>
-                <th>Pregunta</th>
-            </tr>
-        </thead>
-
-        <tbody>
-        	#{list usuarios, as:'e'}
-				<tr>
-					<td>${e.pregunta}</td>
-				</tr>
-			#{/list}
-        </tbody>
-
-        <tfoot>
-            <tr>
-                 <th>Pregunta</th>
-            </tr>
-        </tfoot>
-    </table>
+<center>
+<div class="jumbotron">
+  <h3>La pregunta ha sido ha sido enviada correctamente</h3>      
 </div>
-<script>
-	$(document).ready(function()
-	{
-		 $('#tableUsuarios').DataTable();		
-	});
-</script>
+
+<div class="container">
+<!--
+  <a class="btn btn-lg btn-success" href="/Application/crearUsuario">Crear otro usuario</a>
+  <a class="btn btn-lg btn-danger" href="/Application/index">Volver al inicio</a> 
+-->  
+</div>
+</center>
