@@ -1,10 +1,11 @@
 #{extends 'empty.html' /}
-#{set title:'Registros' /}
+#{set title:'Preguntas' /}
 
 <div class="table-responsive"> 
 <table id="tableUsuarios" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
+                <th>#</th>
                 <th>Pregunta</th>
             </tr>
         </thead>
@@ -12,6 +13,7 @@
         <tbody>
         	#{list usuarios, as:'e'}
 				<tr>
+                    <td>${e.id}</td>
 					<td>${e.pregunta}</td>
 				</tr>
 			#{/list}
@@ -19,6 +21,7 @@
 
         <tfoot>
             <tr>
+                <th>#</th>
                  <th>Pregunta</th>
             </tr>
         </tfoot>
