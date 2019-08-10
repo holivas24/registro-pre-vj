@@ -8,12 +8,12 @@ import models.*;
 public class Application extends Controller {
 		
 
-    public static void index() {
+    public static void cearUsuario() {
     	Usuario user = new Usuario(pregunta);    	
     	render(user);
     }
     
-    public static void crearUsuario()
+    public static void index()
     {
     	render();
     }
