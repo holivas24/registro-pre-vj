@@ -7,18 +7,12 @@ import play.libs.Codec;
 
 @Entity
 public class Usuario extends Model{
-	public String nombre;
-	public String email;
-	public String iglesia;
-	public String username;
-	public String password;
+	public String pregunta;
 	
 	public Usuario() {}
 
-	public Usuario(String nombre, String email, String iglesia) {
-		this.nombre = nombre;
-		this.email = email;
-		this.iglesia = iglesia;
+	public Usuario(String pregunta) {
+		this.pregunta = pregunta;
 		this.save();
 	}
 	
