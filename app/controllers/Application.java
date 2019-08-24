@@ -30,12 +30,13 @@ public class Application extends Controller {
     }
     
 
-    public static void modificarUsuario(Long id,String nombre, String telefono,int boleto, int pago)
+    public static void modificarUsuario(Long id, String nombre, String telefono,int boleto, int pago)
     {
     	Usuario user = Usuario.findById(id);
     	user.nombre = nombre;
     	user.telefono = telefono;
     	user.boleto = boleto;
+    	user.pago = pago;
     	user.save();
     	renderJSON(user);    	
     }
