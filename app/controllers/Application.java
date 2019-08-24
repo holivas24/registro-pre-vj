@@ -36,7 +36,6 @@ public class Application extends Controller {
     	user.nombre = nombre;
     	user.telefono = telefono;
     	user.boleto = boleto;
-    	user.pago = pago;
     	user.save();
     	renderJSON(user);    	
     }

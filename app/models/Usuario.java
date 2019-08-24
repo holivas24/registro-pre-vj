@@ -17,6 +17,7 @@ public class Usuario extends Model{
 	public Usuario() {}
 
 	public Usuario(int boleto, String nombre, String telefono, int pago) {
+		this.boleto = boleto;
 		this.nombre = nombre;
 		this.telefono = telefono;
 		this.pago = pago;
