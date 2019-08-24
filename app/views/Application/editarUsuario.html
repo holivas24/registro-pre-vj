@@ -47,7 +47,7 @@
 			telefono = $('#telefono').text(),
 			boleto= $('#boleto').text(),
 			pago= $('#pago').text();
-			var link = 'Application/modificarUsuario?id=${user.id}&nombre='+nombre+'&telefono='+telefono+'&boleto='+boleto+'&pago='+pago;
+			var link = '/Application/modificarUsuario?id=${user.id}&nombre='+nombre+'&telefono='+telefono+'&boleto='+boleto+'&pago='+pago;
 			$.get(link,function(){
 				alert("Modificado exitosamente");
 			});
