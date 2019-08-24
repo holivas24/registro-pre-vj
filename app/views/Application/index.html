@@ -5,27 +5,33 @@
 <table id="tableUsuarios" class="display" cellspacing="0" width="100%">
         <thead>
             <tr>
+                <th>Boleto #</th>
                 <th>Nombre</th>
-                <th>Email</th>
-                <th>Iglesia</th>
+                <th>Telefono</th>
+                <th>Pago</th>
+                <th> </th>
             </tr>
         </thead>
 
         <tbody>
         	#{list usuarios, as:'e'}
 				<tr>
+
+					<td>${e.boleto}</td>
 					<td>${e.nombre}</td>
-					<td>${e.email}</td>
-                    <td>${e.iglesia}</td>
+                    <td>${e.telefono}</td>
+                    <td><a class="btn btn-primary" href="/Application/editarUsuario?id=${e.id}">Editar usuario</a></td>
 				</tr>
 			#{/list}
         </tbody>
 
         <tfoot>
             <tr>
-                 <th>Nombre</th>
-                <th>Email</th>
-                <th>Iglesia</th>
+                <th>Boleto #</th>
+                <th>Nombre</th>
+                <th>Telefono</th>
+                <th>Pago</th>
+                <th> </th>
             </tr>
         </tfoot>
     </table>

@@ -1,0 +1,56 @@
+#{extends 'empty.html' /}
+#{set title:'Editar usuario' /}
+ <div class="col-md-12">
+ <!--   Basic Table  -->
+<div class="panel panel-default">
+    <div class="panel-body">
+		<div class="table-responsive"> 
+			<table id="tablaUsuario" class="table" cellspacing="0" width="100%">
+				<thead>
+					<th>Datos:</th>
+					<th>${user.nombre}</th>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Boleto #:</td>
+						<td ><a href="#" id="boleto" data-type="text" data-title="Introduzca numero" class="editable">${user.boleto}</a></td>
+					</tr>
+					<tr>
+						<td>Nombre:</td>
+						<td ><a href="#" id="usuarioNombre" data-type="text" data-title="Introduzca nombre" class="editable">${user.nombre}</a></td>
+					</tr>
+					<tr>
+						<td>Telefono:</td>
+						<td><a href="#" id="telefono" data-type="text" data-title="Introduzca telefono" class="editable">${user.telefono}</a></td>
+					</tr>
+					<tr>
+						<td>Pago:</td>
+						<td><a href="#" id="pago" data-type="text" data-title="Introduzca pago" class="editable">${user.pago}</a></td>
+					</tr>
+					<tr>
+						<td><button class="btn btn-success" onClick="guardarCambios()"><span class="glyphicon glyphicon-floppy-disk"></span> Guardar cambios</button></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		<div>
+	</div>	
+</div>	
+<script>
+	$(document).ready(function(){
+		
+		$('.editable').editable();
+	});
+	function guardarCambios()
+	{
+		var nombre= $('#usuarioNombre').text(),
+			telefono = $('#usuarioApellido').text(),
+			boleto= $('#boleto').text(),
+			pago= $('#pago').text();
+			var link = '/Application/modificarUsuario?id={user.id}&nombre='+nombre+'&apellido='+apellido+'&boleto='+boleto+'&pago='+pago;
+			$.get(link,function(){
+				alert("Modificado exitosamente");
+			});
+			location.reload();
+	}
+</script>

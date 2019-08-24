@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>registro-pre-vj</name>
+	<name>back-to-school</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -15,7 +15,7 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.playframework.playclipse.playNature</nature>
 	</natures>
-	<linkedResources><link><name>docviewer</name><type>2</type><location>/home/holivas/Desarrollo/play/modules/docviewer/app</location></link>
-<link><name>public/docviewer</name><type>2</type><location>/home/holivas/Desarrollo/play/modules/docviewer/public</location></link>
+	<linkedResources><link><name>docviewer</name><type>2</type><location>/home/holivas/sw/play/modules/docviewer/app</location></link>
+<link><name>public/docviewer</name><type>2</type><location>/home/holivas/sw/play/modules/docviewer/public</location></link>
 </linkedResources>
 </projectDescription>

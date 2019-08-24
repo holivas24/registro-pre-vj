@@ -19,9 +19,26 @@ public class Application extends Controller {
     	render();
     }
     
-    public static void newUser(String nombre, String email, String iglesia) {
-    	Usuario user = new Usuario(nombre,email,iglesia);    	
+    public static void newUser(int boleto, String nombre, String telefono, int pago) {
+    	Usuario user = new Usuario(boleto,nombre,telefono,pago);    	
     	render(user);
-}
+    }
+    
+    public static void editarUsuario(Long id) {
+    	Usuario user = Usuario.findById(id);
+    	render(user);
+    }
+    
+
+    public static void modificarUsuario(Long id,String nombre, String telefono,int boleto, int pago)
+    {
+    	Usuario user = Usuario.findById(id);
+    	user.nombre = nombre;
+    	user.telefono = telefono;
+    	user.boleto = boleto;
+    	user.pago = pago;
+    	user.save();
+    	renderJSON(user);    	
+    }
     
 }
